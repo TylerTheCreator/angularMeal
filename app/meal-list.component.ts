@@ -17,7 +17,7 @@ import {CaloriesStatePipe } from './calories.pipe';
   <select (change)="onChangeCalories($event.target.value)" class="filter">
     <option value="High">High</option>
     <option value="Low">Low</option>
-    <option value="All" selected>TopCalorieAll</option>
+    <option value="All" selected>All</option>
   </select>
   <meal-display *ngFor="#currentMeal of mealList | done:filterDone | calories:filterCalories"
     (click)="mealClicked(currentMeal)"
