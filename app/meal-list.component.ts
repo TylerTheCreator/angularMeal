@@ -14,17 +14,6 @@ import {CaloriesStatePipe } from './calories.pipe';
   pipes: [DonePipe, DetailStatePipe, CaloriesStatePipe],
   directives: [MealComponent, EditMealDetailsComponent, NewMealComponent],
   template: `
-  <select (change)="onChange($event.target.value)" class="filter">
-    <option value="all" selected>Show All</option>
-    <option value="done">Show Done</option>
-    <option value="notDone" >Show Not Done</option>
-  </select>
-  <select (change)="onChangeDetail($event.target.value)" class="filter">
-    <option value="Low">Low</option>
-    <option value="Medium">Medium</option>
-    <option value="High">High</option>
-    <option value="All" selected>TopDetailAll</option>
-  </select>
   <select (change)="onChangeCalories($event.target.value)" class="filter">
     <option value="High">High</option>
     <option value="Low">Low</option>
