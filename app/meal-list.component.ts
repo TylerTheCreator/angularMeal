@@ -21,8 +21,6 @@ import {CaloriesStatePipe } from './calories.pipe';
   </select>
   <meal-display *ngFor="#currentMeal of mealList | done:filterDone | calories:filterCalories"
     (click)="mealClicked(currentMeal)"
-    [class.selected]="currentMeal === selectedMeal"
-    [meal]="currentMeal">
   </meal-display>
   <edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal">
   </edit-meal-details>
