@@ -4,11 +4,11 @@ import { Meal } from './meal.model';
 
 @Pipe({
   name: "detail",
-  pure: false  // can we do this without a boolean case
+  pure: false
 })
 
 export class DetailStatePipe implements PipeTransform {
-  transform(input: Meal[], args) {  //this method transforms the array Meal[]??
+  transform(input: Meal[], args) {
     var desiredDoneState = args[0];
     if(desiredDoneState === "High") {
       return input.filter((meal) => {

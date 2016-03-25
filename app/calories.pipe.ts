@@ -4,7 +4,7 @@ import { Meal } from './meal.model';
 
 @Pipe({
   name: "calories",
-  pure: false  // can we do this without a boolean case
+  pure: false
 })
 
 export class CaloriesStatePipe implements PipeTransform{
@@ -21,5 +21,5 @@ export class CaloriesStatePipe implements PipeTransform{
     } else {
       return input;
     }
-  }// end of transform
+  }
 }

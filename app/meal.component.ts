@@ -1,7 +1,7 @@
 import { Component } from 'angular2/core';
 import { Meal } from './meal.model';
 
-@Component({ //decorator    //annotation is the whole thing
+@Component({
     selector: 'meal-display',
     inputs: ['meal'],
   template:  `
@@ -13,7 +13,7 @@ import { Meal } from './meal.model';
   `
 })
 export class MealComponent {
-  public meal: Meal;  //declaration ?
+  public meal: Meal;
   toggleDone(setState: boolean){
     this.meal.done = setState;
   }
